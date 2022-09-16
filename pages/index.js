@@ -52,7 +52,13 @@ export default function Home() {
       {shortLink && (
         <div className="flex flex-col justify-center items-center p-4">
           <p className="text-2xl">Your Shortened Link :</p>
-          <a className="hover:underline hover:underline-offset-1" href={shortLink} rel="noreferrer" target="_blank">
+          <a
+            className="hover:underline hover:underline-offset-1"
+            href={shortLink}
+            rel="noreferrer"
+            target="_blank"
+            placeholder="Enter Link Here"
+          >
             {shortLink}
           </a>
         </div>
