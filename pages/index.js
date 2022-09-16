@@ -32,7 +32,7 @@ export default function Home() {
             setShortLink(host + "/api/" + res.data.slug);
             console.log(res.data.slug);
           } else {
-            setError({ isError: true, error: res.data.error })
+            setError({ isError: true, error: res.data.error });
           }
         })
         .catch((err) => setError({ isError: true, error: err.message }));
@@ -45,7 +45,7 @@ export default function Home() {
     <div className="flex flex-col justify-center items-center bg-zinc-900 h-screen">
       <p className="text-5xl font-bold m-4">URL Shortener</p>
       <form className="flex flex-row w-1/3 justify-center items-center p-6" action="input" onSubmit={onSubmit}>
-        <input className="flex-grow h-full rounded-md mr-4" type="text" id="link" />
+        <input className="flex-grow h-full rounded-md mr-4 text-zinc-900" type="text" id="link" />
         <input className="bg-blue-800 rounded-md px-6 py-2" type="submit" value="Submit" />
       </form>
       {error.isError && <p>{error.error}</p>}
